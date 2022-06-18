@@ -396,13 +396,12 @@ for (int x = 40; x < width - 40; x += 30) {
       p.rect(0, 0, p.width, p.height/2);
       p.fill(255, 192, 75);
       p.rect(20, 80, p.width - 40, 40);
-      for (let x - 40; x <= p.width - 40; x += 30) {
+      for (let x = 40; x <= p.width - 40; x += 30) {
         p.fill(122, 192, 255, x/2);
         p.rect(x, 40, 20, p.height - 80);
       }
     };
   };
-
   let rgb_sketch2_instance = new p5(rgb_sketch2, "rgb_sketch2_container");
 </script>
 
