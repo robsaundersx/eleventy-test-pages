@@ -345,6 +345,7 @@ for (int y = 0; y < height; y += 1) {
   }
 }
 ```
+This is the result of running the above sketch:
 
 <div id="rgb_sketch1_container"></div>
 
