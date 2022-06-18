@@ -80,6 +80,26 @@ Functions are the basic building blocks of a Processing program. The behaviour o
 
 ==Figure: Drawing Functions==
 
+<div id="drawing_functions_container"></div>
+
+<script>
+  const drawing_functions = p => {
+    p.setup = function() {
+      p.createCanvas(600, 600);
+      p.background(255);
+      for (let x = 0; x < p.width; x += 50) {
+        for (let y = 0; y < p.height; y += 50) {
+          p.translate(x, y);
+          p.noStroke();
+          p.fill(255 - 32);
+          p.rect(45, 45);
+        }
+      }
+    };
+  };
+  let drawing_functions_instance = new p5(drawing_functions, "drawing_functions_container");
+</script>
+
 ### Drawing Order
 When a program runs, the computer starts at the top and reads each line of code until it reaches the last line and then stops. If you want a shape to be drawn on top of all other shapes, it needs to follow the others in the code.
 
@@ -330,7 +350,11 @@ for (int x = 10; x < width; x += 15) {
 
 For each line in y-direction (`y < height`) the code iterates through every pixel in x-direction (`x < width`) and draws an ellipse at the (x, y) location.
 
-### Color ==TODO: Change name to Style?==
+### Style
+
+#### Stroke
+
+#### Colour
 To change colour of shapes drawn to the _display window_ you can use the `background()`, `fill()`, and `stroke()` functions.
 
 The values of the parameters given to these functions indicate the colour to be used for the background of the window, the colour to use to fill shapes, and the colour used to outline shapes.
@@ -412,7 +436,11 @@ for (int x = 40; x < width - 40; x += 30) {
 ## Exercises
 
 ### Random
-The `random()` function returns random values from within a given range. When given one parameter the range is from `0` to the value given. The following sketch uses `random()` to draw multiple rectangles with different heights. The `random()` returns a `float` (floating-point) value, so the variable assigned a random value should also be a `float`:
+The `random()` function returns random values from within a given range. When given one parameter the range is from `0` to the value given.
+
+#### Example 1: Random rectangles in a line
+
+The following sketch uses `random()` to draw multiple rectangles with different heights. The `random()` returns a `float` (floating-point) value, so the variable assigned a random value should also be a `float`:
 
 ```java
 size(400, 200);
@@ -440,6 +468,8 @@ for (int x = 0; x <= width; x += 10) {
   let random_sketch1_instance = new p5(random_sketch1, "random_sketch1_container");
 </script>
 
+#### Example 2: Lines at random angles
+
 When given two parameters, the range of values returned are between the first (minimum) value and the second (maximum) value. The following sketch uses the two parameter version of `random()` to generate values to draw lines at random angles:
 
 ```java
@@ -464,6 +494,8 @@ for (int x = 40; x <= width - 40; x += 20) {
   };
   let random_sketch2_instance = new p5(random_sketch2, "random_sketch2_container");
 </script>
+
+#### Example 3: Random circles in a grid
 
 The following example uses the two parameter version of `random()` to generate a grid of circles with randomly chosen sizes and colours.
 
@@ -508,6 +540,8 @@ for (int x = border; x <= width - border; x += step) {
   };
   let random_sketch3_instance = new p5(random_sketch3, "random_sketch3_container");
 </script>
+
+#### Example 4: Random Chords on a Circle
 
 The following example uses the one parameter version of `random()` to choose two angles and draw a connecting line between the positions these angles represent on a circle, centred in the middle of the window.
 
@@ -555,28 +589,4 @@ for (int i = 0; i < numLines; i++) {
     };
   };
   let random_sketch4_instance = new p5(random_sketch4, "random_sketch4_container");
-</script>
-
-## This is an example sketch
-
-<div id="blue_canvas"></div>
-<div id="pink_canvas"></div>
-
-<script>
-const pink_sketch = p => {
-  p.setup = function() {
-    p.createCanvas(200, 200);
-    p.background(255, 0, 200);
-  };
-};
-
-const blue_sketch = p => {
-  p.setup = function() {
-    p.createCanvas(200, 200);
-    p.background(0, 200, 255);
-  };
-};
-
-let s1 = new p5(pink_sketch, pink_canvas);
-let s2 = new p5(blue_sketch, blue_canvas);
 </script>
