@@ -251,12 +251,12 @@ for (int x = 40; x <= width-40; x += 20) {
 <script>
   const sketch1 = p => {
     p.setup = function() {
-      createCanvas(400, 200);
-      background(255 - 32);
-      stroke(0);
-      strokeWeight(5);
-      for (let x = 40; x <= width - 40; x += 20) {
-        line(x+10, 40, x-10, height-40);
+      p.createCanvas(400, 200);
+      p.background(255 - 32);
+      p.stroke(0);
+      p.strokeWeight(5);
+      for (let x = 40; x <= p.width - 40; x += 20) {
+        p.line(x+10, 40, x-10, p.height-40);
       }
     };
   };
