@@ -47,16 +47,16 @@ ellipse(50, 50, 80, 80);
 
 This line of code means "draw an ellipse, with the center 50 pixels over from the left and 50 pixels down from the top, with a width and height of 80 pixels." Click the Run button in the _toolbar_ or choose `Sketch > Run` from the menu bar.
 
-<div id="ellipse_sketch_container"></div>
+<div id="sketch1_container"></div>
 <script>
-  const ellipse_sketch = p => {
+  const sketch1 = p => {
     p.setup = function() {
       p.createCanvas(100, 100);
       p.background(255-32);
       p.ellipse(50, 50, 80, 80);
     };
   };
-  let ellipse_sketch_instance = new p5(ellipse_sketch, "ellipse_sketch_container");
+  let sketch1_instance = new p5(sketch1, "sketch1_container");
 </script>
 
 If you've typed everything correctly, you’ll see the ellipse image appear in a _display window_.
