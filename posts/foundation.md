@@ -449,6 +449,21 @@ for (int x = 40; x <= width - 40; x += 20) {
   line(x - dx, 40, x + dx, height - 40);
 }
 ```
+<div id="random_sketch2_container"></div>
+
+<script>
+  const random_sketch2 = p => {
+    p.setup = function() {
+      p.createCanvas(400, 200);
+      p.background(255 - 32);
+      for (let x = 40; x <= p.width - 40; x += 20) {
+        let dx = p.random(-10, 10);
+        p.line(x - dx, 40, x + dx, p.height - 40);
+      }
+    };
+  };
+  let random_sketch2_instance = new p5(random_sketch2, "random_sketch2_container");
+</script>
 
 The following example uses the two parameter version of `random()` to generate a grid of circles with randomly chosen sizes and colours.
 
@@ -469,6 +484,28 @@ for (int x = border; x <= width - border; x += step) {
   }
 }
 ```
+<div id="random_sketch3_container"></div>
+
+<script>
+  const random_sketch3 = p => {
+    p.createCanvas(400, 400);
+    p.background(255);
+    p.noStroke();
+
+    let border = 20;
+    let cols = 40;
+    let step = (p.width - 2 * border) / (cols - 1);
+
+    for (let x = border; x <= p.width - border; x += step) {
+      for (let y = border; y <= p.height - border; y += step) {
+        let diameter = p.random(step * 0.3, step);
+        p.fill(p.random(16, 240));
+        p.ellipse(x, y, diameter, diameter);
+      }
+    }
+  };
+  let random_sketch3_instance = new p5(random_sketch3, "random_sketch3_container");
+</script>
 
 The following example uses the one parameter version of `random()` to choose two angles and draw a connecting line between the positions these angles represent on a circle, centred in the middle of the window.
 
@@ -491,8 +528,32 @@ for (int i = 0; i < numLines; i++) {
   line(x1, y1, x2, y2);
 }
 ```
+<div id="random_sketch4_container"></div>
 
+<script>
+  const random_sketch4 = p => {
+    p.setup = function() {
+      p.createCanvas(400, 400);
+      p.background(255);
+      p.stroke(0, 64);
 
+      let border = 20;
+      let numLines = 160;
+      let radius = p.width/2 - border;
+
+      for (let i = 0; i < numLines; i++) {
+        let angle1 = p.random(p.TWO_PI);
+        let angle2 = p.random(p.TWO_PI);
+        let x1 = p.width/2 + p.cos(angle1) * radius;
+        let y1 = p.height/2 + p.sin(angle1) * radius;
+        let x2 = p.width/2 + p.cos(angle2) * radius;
+        let y2 = p.height/2 + p.sin(angle2) * radius;
+        p.line(x1, y1, x2, y2);
+      }
+    };
+  };
+  let random_sketch4_instance = new p5(random_sketch4, "random_sketch4_container");
+</script>
 
 ## This is an example sketch
 
