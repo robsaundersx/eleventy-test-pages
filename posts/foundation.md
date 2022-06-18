@@ -310,6 +310,19 @@ for (int x = 10; x < width; x += 15) {
   }
 }
 ```
+<div id="sketch3_container"></div>
+
+<script>
+const sketch3 = p => {
+  p.createCanvas(395, 170);
+  for (let x = 10; x < p.width; x += 15) {
+    for (let y = 10; y < p.height; y += 15) {
+      p.ellipse(x, y, 10, 10);
+    }
+  }
+};
+let sketch3_instance = new p5(sketch3, sketch3_container);
+</script>
 
 For each line in y-direction (y < height) the code iterates through every pixel in x-direction (x < width) and draws an ellipse at the (x, y) location.
 
