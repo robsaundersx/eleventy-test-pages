@@ -106,7 +106,7 @@ Functions are the basic building blocks of a Processing program. The behaviour o
       p.ellipse(x2, y2, 5, 5);
     };
   };
-  new p5(line_sketch, "line_sketch_container");
+  let line_sketch_instance = new p5(line_sketch, "line_sketch_container");
 </script>
 
 ### Drawing Order
