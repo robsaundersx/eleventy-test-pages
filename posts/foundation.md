@@ -317,6 +317,7 @@ for (int x = 10; x < width; x += 15) {
   const loop_sketch3 = p => {
     p.setup = function() {
       p.createCanvas(395, 170);
+      p.background(255 - 32);
       for (let x = 10; x < p.width; x += 15) {
         for (let y = 10; y < p.height; y += 15) {
           p.ellipse(x, y, 10, 10);
@@ -376,13 +377,34 @@ background(128); // fill the window with a mid-grey
 fill(224); // set the fill colour to almost white
 rect(0, 0, width, height/2); // draw a rectangle
 fill(255, 192, 75); // set the fill colour to an orange
-Fixed rect(20, 80, width - 40, 40); // draw a rectangle in the center
+rect(20, 80, width - 40, 40); // draw a rectangle in the center
 // draw a series of rectangles with different opacities
 for (int x = 40; x < width - 40; x += 30) {
   fill(122, 192, 255, x/2); // set fill colour to a transparent blue
   rect(x, 40, 20, height-80); // draw the vertical rectangle
 }
 ```
+
+<div id="rgb_sketch2_container"></div>
+
+<script>
+  const rgb_sketch2 = p => {
+    p.setup() = function() {
+      p.createCanvas(400, 200);
+      p.background(128);
+      p.fill(224);
+      p.rect(0, 0, p.width, p.height/2);
+      p.fill(255, 192, 75);
+      p.rect(20, 80, width - 40, 40);
+      for (let x - 40; x <= p.width - 40; x += 30) {
+        p.fill(122, 192, 255, x/2);
+        p.rect(x, 40, 20, p.height - 80);
+      }
+    };
+  };
+
+  let rbg_sketch2_instance = new p5(rgb_sketch2, "rgb_sketch2_container");
+</script>
 
 ### Arrays
 
