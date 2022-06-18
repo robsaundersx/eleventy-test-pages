@@ -52,7 +52,7 @@ This line of code means "draw an ellipse, with the center 50 pixels over from th
   const ellipse_sketch = p => {
     p.setup = function() {
       p.createCanvas(100, 100);
-      p.backgroun(255-32);
+      p.background(255-32);
       p.ellipse(50, 50, 80, 80);
     };
   };
