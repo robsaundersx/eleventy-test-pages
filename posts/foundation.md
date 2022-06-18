@@ -252,6 +252,7 @@ for (int x = 40; x <= width-40; x += 20) {
   const sketch1 = p => {
     p.setup = function() {
       createCanvas(400, 400);
+      background(255 - 32);
       strokeWeight(5);
       for (let x = 40; x <= width - 40; x += 20) {
         line(x+10, 40, x-10, height-40);
