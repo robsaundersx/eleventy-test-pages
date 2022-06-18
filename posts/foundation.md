@@ -324,7 +324,7 @@ for (int x = 10; x < width; x += 15) {
       }
     };
   };
-  Flet loop_sketch3_instance = new p5(loop_sketch3, "loop_sketch3_container");
+  let loop_sketch3_instance = new p5(loop_sketch3, "loop_sketch3_container");
 </script>
 
 For each line in y-direction (`y < height`) the code iterates through every pixel in x-direction (`x < width`) and draws an ellipse at the (x, y) location.
