@@ -80,24 +80,33 @@ Functions are the basic building blocks of a Processing program. The behaviour o
 
 ==Figure: Drawing Functions==
 
-<div id="drawing_functions_container"></div>
-
+<div>
+  <div id="line_sketch_container"></div>
+  <p><code>line(10, 40, 30, 20)</code></p>
+</div>
 <script>
-  const drawing_functions = p => {
+  const line_sketch = p => {
+    let x1 = 10;
+    let y1 = 40;
+    let x2 = 30;
+    let y2 = 20;
+
     p.setup = function() {
-      p.createCanvas(600, 600);
-      p.background(255);
-      for (let x = 0; x < p.width; x += 50) {
-        for (let y = 0; y < p.height; y += 50) {
-          p.translate(x, y);
-          p.noStroke();
-          p.fill(255 - 32);
-          p.rect(45, 45);
-        }
-      }
+      p.createCanvas(50, 50);
+    };
+
+    p.draw = function() {
+      p.background(255 - 32);
+      p.strokeWeight(3);
+      p.stroke(0);
+      p.line(x1, y1, x2, y2);
+      p.noStroke();
+      p.fill(0);
+      p.ellipse(x1, y1, 5, 5);
+      p.ellipse(x2, y2, 5, 5);
     };
   };
-  let drawing_functions_instance = new p5(drawing_functions, "drawing_functions_container");
+  new p5(line_sketch, "line_sketch_container");
 </script>
 
 ### Drawing Order
