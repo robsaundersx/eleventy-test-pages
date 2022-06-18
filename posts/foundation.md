@@ -417,7 +417,7 @@ The `random()` function returns random values from within a given range. When gi
 ```java
 size(400, 200);
 rectMode(CENTER);
-for (int x = 40; x <= width - 40; x += 10) {
+for (int x = 0; x <= width; x += 10) {
   float h = height/8 + random(height/2);
   rect(x, height/2, 5, h);
 }
@@ -431,7 +431,7 @@ for (int x = 40; x <= width - 40; x += 10) {
       p.createCanvas(400, 200);
       p.background(255 - 32);
       p.rectMode(p.CENTER);
-      for (let x = 40; x <= p.width - 40; x += 10) {
+      for (let x = 0; x <= p.width; x += 10) {
         let h = p.height/8 + p.random(p.height/2);
         p.rect(x, p.height/2, 5, h);
       }
