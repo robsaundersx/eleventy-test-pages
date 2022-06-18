@@ -313,15 +313,15 @@ for (int x = 10; x < width; x += 15) {
 <div id="loop_sketch3_container"></div>
 
 <script>
-const loop_sketch3 = p => {
-  p.createCanvas(395, 170);
-  for (let x = 10; x < p.width; x += 15) {
-    for (let y = 10; y < p.height; y += 15) {
-      p.ellipse(x, y, 10, 10);
+  const loop_sketch3 = p => {
+    p.createCanvas(395, 170);
+    for (let x = 10; x < p.width; x += 15) {
+      for (let y = 10; y < p.height; y += 15) {
+        p.ellipse(x, y, 10, 10);
+      }
     }
-  }
-};
-let loop_sketch3_instance = new p5(loop_sketch3, "loop_sketch3_container");
+  };
+  let loop_sketch3_instance = new p5(loop_sketch3, "loop_sketch3_container");
 </script>
 
 For each line in y-direction (`y < height`) the code iterates through every pixel in x-direction (`x < width`) and draws an ellipse at the (x, y) location.
@@ -372,7 +372,7 @@ background(128); // fill the window with a mid-grey
 fill(224); // set the fill colour to almost white
 rect(0, 0, width, height/2); // draw a rectangle
 fill(255, 192, 75); // set the fill colour to an orange
-rect(20, 80, width - 40, 40); // draw a rectangle in the center
+Fixed rect(20, 80, width - 40, 40); // draw a rectangle in the center
 // draw a series of rectangles with different opacities
 for (int x = 40; x < width - 40; x += 30) {
   fill(122, 192, 255, x/2); // set fill colour to a transparent blue
