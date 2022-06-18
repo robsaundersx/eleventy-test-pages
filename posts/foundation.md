@@ -86,23 +86,18 @@ createCanvas(200, 200);
 ### Drawing Functions
 Functions are the basic building blocks of a Processing program. The behaviour of a function is defined by its parameters, a set of arguments enclosed in parentheses. Processing includes a collection of functions to draw basic shapes. For example, to draw a single line, we need four parameters: two for the starting location and two for the end.
 
-==Figure: Drawing Functions==
+<div id="line_sketch_container"></div>
+<p><code>line(10, 40, 30, 20)</code></p>
 
-<div>
-  <div id="line_sketch_container"></div>
-  <p><code>line(10, 40, 30, 20)</code></p>
-</div>
 <script>
   const line_sketch = p => {
     let x1 = 10;
     let y1 = 40;
     let x2 = 30;
     let y2 = 20;
-
     p.setup = function() {
       p.createCanvas(50, 50);
     };
-
     p.draw = function() {
       p.background(255 - 32);
       p.strokeWeight(3);
