@@ -113,16 +113,28 @@ Functions are the basic building blocks of a Processing program. The behaviour o
 </script>
 
 <div id="rect_sketch_container"></div>
-<p><code>rect()</code></p>
+<p><code>rect(30, 20, 50, 70)</code></p>
 <script>
   const rect_sketch = p => {
     p.setup = function() {
       p.createCanvas(100, 100);
       p.background(255 - 32);
-      p.rect(30, 20, 50, 70)
+      p.rect(30, 20, 50, 70);
     };
   };
   new p5(rect_sketch, "rect_sketch_container");
+</script>
+
+<div id="ellipse_sketch_container"></div>
+<script>
+  const ellipse_sketch = p => {
+    p.setup = function() {
+      p.createCanvas(100, 100);
+      p.background(255 - 32);
+      p.ellipse(60, 40, 30, 25);
+    };
+  };
+  new p5(ellipse_sketch, "ellipse_sketch_container");
 </script>
 
 ### Drawing Order
