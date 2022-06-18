@@ -245,6 +245,7 @@ for (int x = 40; x <= width-40; x += 20) {
   line(x+10, 40, x-10, height-40);
 }
 ```
+This is what this sketch looks like when run:
 
 <div id="sketch1_container"></div>
 
@@ -274,6 +275,28 @@ while(x <= width-40) {
 }
 ```
 Notice how the elements of the `for` loop are still present in the `while` loop, i.e., `int x = 40;` appears before the loop, `x <= width-40` appears in the conditional test, and `x += 20` appears at the end of the code block. The advantage of using a `for` loop is that these three elements are brought together in one place, so it is often easier to see how they will work.
+
+And it produces exactly the same pattern:
+
+<div id="sketch2_container"></div>
+
+<script>
+  const sketch2 = p => {
+    p.setup = function() {
+      p.createCanvas(400, 200);
+      p.background(255 - 32);
+      p.stroke(0);
+      p.strokeWeight(5);
+      let x = 40;
+      while (x <= p.width - 40) {
+        p.line(x+10, 40, x-10, p.height-40);
+        x += 20;
+      }
+    };
+  };
+  let sketch2_instance = new p5(sketch2, sketch2_container);
+</script>
+
 
 #### Loops in Loops
 When one for loop is embedded inside another, the number of repetitions is multiplied. 
