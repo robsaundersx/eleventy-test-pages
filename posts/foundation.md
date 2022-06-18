@@ -87,29 +87,29 @@ createCanvas(200, 200);
 Functions are the basic building blocks of a Processing program. The behaviour of a function is defined by its parameters, a set of arguments enclosed in parentheses. Processing includes a collection of functions to draw basic shapes. For example, to draw a single line, we need four parameters: two for the starting location and two for the end.
 
 <div id="line_sketch_container"></div>
-<p><code>line(10, 40, 30, 20)</code></p>
-
+<p><code>line(10, 90, 70, 20)</code></p>
 <script>
   const line_sketch = p => {
-    let x1 = 10;
-    let y1 = 40;
-    let x2 = 30;
-    let y2 = 20;
     p.setup = function() {
-      p.createCanvas(50, 50);
-    };
-    p.draw = function() {
+      p.createCanvas(100, 100);
       p.background(255 - 32);
-      p.strokeWeight(3);
-      p.stroke(0);
-      p.line(x1, y1, x2, y2);
-      p.noStroke();
-      p.fill(0);
-      p.ellipse(x1, y1, 5, 5);
-      p.ellipse(x2, y2, 5, 5);
+      p.line(10, 90, 70, 20);
     };
   };
   let line_sketch_instance = new p5(line_sketch, "line_sketch_container");
+</script>
+
+<div id="triangle_sketch_container"></div>
+<p><code>triangle()</code></p>
+<script>
+  const triangle_sketch = p => {
+    p.setup = function() {
+      p.createCanvas(100, 100);
+      p.background(255 - 32);
+      p.triangle(10, 90, 70, 20, 30, 10);
+    };
+  };
+  new p5(triangle_sketch, "triangle_sketch_container");
 </script>
 
 ### Drawing Order
