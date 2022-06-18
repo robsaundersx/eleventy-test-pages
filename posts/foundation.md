@@ -174,7 +174,7 @@ rect(20, 20, 40, 60);
       p.rect(20, 20, 40, 60);
     };
   };
-  new p5(order_sketch1, "order_sketch1_container");
+  new p5(order_sketch2, "order_sketch2_container");
 </script>
 
 > TODO: Drawing Modes
