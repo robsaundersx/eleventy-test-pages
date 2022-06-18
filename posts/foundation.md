@@ -389,7 +389,7 @@ for (int x = 40; x < width - 40; x += 30) {
 
 <script>
   const rgb_sketch2 = p => {
-    p.setup() = function() {
+    p.setup = function() {
       p.createCanvas(400, 200);
       p.background(128);
       p.fill(224);
@@ -403,7 +403,7 @@ for (int x = 40; x < width - 40; x += 30) {
     };
   };
 
-  let rbg_sketch2_instance = new p5(rgb_sketch2, "rgb_sketch2_container");
+  let rgb_sketch2_instance = new p5(rgb_sketch2, "rgb_sketch2_container");
 </script>
 
 ### Arrays
