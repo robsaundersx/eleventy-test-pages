@@ -247,10 +247,10 @@ for (int x = 40; x <= width-40; x += 20) {
 ```
 This is what this sketch looks like when run:
 
-<div id="sketch1_container"></div>
+<div id="loop_sketch1_container"></div>
 
 <script>
-  const sketch1 = p => {
+  const loop_sketch1 = p => {
     p.setup = function() {
       p.createCanvas(400, 200);
       p.background(255 - 32);
@@ -261,7 +261,7 @@ This is what this sketch looks like when run:
       }
     };
   };
-  let sketch1_instance = new p5(sketch1, sketch1_container);
+  let loop_sketch1_instance = new p5(loop_sketch1, "loop_sketch1_container");
 </script>
 
 For comparison, here is the same pattern drawn with a `while` loop:
@@ -278,10 +278,10 @@ Notice how the elements of the `for` loop are still present in the `while` loop,
 
 And it produces exactly the same pattern:
 
-<div id="sketch2_container"></div>
+<div id="loop_sketch2_container"></div>
 
 <script>
-  const sketch2 = p => {
+  const loop_sketch2 = p => {
     p.setup = function() {
       p.createCanvas(400, 200);
       p.background(255 - 32);
@@ -294,7 +294,7 @@ And it produces exactly the same pattern:
       }
     };
   };
-  let sketch2_instance = new p5(sketch2, sketch2_container);
+  let loop_sketch2_instance = new p5(loop_sketch2, "loop_sketch2_container");
 </script>
 
 
@@ -310,10 +310,10 @@ for (int x = 10; x < width; x += 15) {
   }
 }
 ```
-<div id="sketch3_container"></div>
+<div id="loop_sketch3_container"></div>
 
 <script>
-const sketch3 = p => {
+const loop_sketch3 = p => {
   p.createCanvas(395, 170);
   for (let x = 10; x < p.width; x += 15) {
     for (let y = 10; y < p.height; y += 15) {
@@ -321,7 +321,7 @@ const sketch3 = p => {
     }
   }
 };
-let sketch3_instance = new p5(sketch3, "sketch3_container");
+let loop_sketch3_instance = new p5(loop_sketch3, "loop_sketch3_container");
 </script>
 
 For each line in y-direction (`y < height`) the code iterates through every pixel in x-direction (`x < width`) and draws an ellipse at the (x, y) location.
@@ -342,6 +342,23 @@ for (int y = 0; y < height; y += 1) {
   }
 }
 ```
+
+<div id="rgb_sketch1_container"><div>
+
+<script>
+const rgb_sketch1 = p => {
+  p.setup = function() {
+    p.createCanvas(255, 255);
+    for (let y = 0; y < p.height; ++y) {
+      for (let x = 0; x < p.width; ++x) {
+        p.stroke(x, y, 122);
+        p.point(x, y);
+      }
+    }
+  };
+};
+let rgb_sketch1_instance = new p5(rgb_sketch1, "rgb1_container");
+</script>
 
 Specifying RGB values often isn’t very intuitive, so to choose colours, you can use _Color Selector_ tool, by selecting `Tools > Color Selector` from the menu.
 
