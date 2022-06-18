@@ -430,7 +430,7 @@ for (int x = 40; x <= width - 40; x += 10) {
     p.setup = function() {
       p.createCanvas(400, 200);
       p.background(255 - 32);
-      p.rectMode(CENTER);
+      p.rectMode(p.CENTER);
       for (let x = 40; x <= p.width - 40; x += 10) {
         let h = p.height/8 + p.random(p.height/2);
         p.rect(x, p.height/2, 5, h);
