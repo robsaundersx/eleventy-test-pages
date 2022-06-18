@@ -96,26 +96,41 @@ Functions are the basic building blocks of a Processing program. The behaviour o
       p.line(10, 90, 70, 20);
     };
   };
-  let line_sketch_instance = new p5(line_sketch, "line_sketch_container");
+  new p5(line_sketch, "line_sketch_container");
 </script>
 
 <div id="triangle_sketch_container"></div>
-<p><code>triangle()</code></p>
+<p><code>triangle(10, 90, 70, 80, 30, 10)</code></p>
 <script>
   const triangle_sketch = p => {
     p.setup = function() {
       p.createCanvas(100, 100);
       p.background(255 - 32);
-      p.triangle(10, 90, 70, 20, 30, 10);
+      p.triangle(10, 90, 70, 80, 30, 10);
     };
   };
   new p5(triangle_sketch, "triangle_sketch_container");
 </script>
 
+<div id="rect_sketch_container"></div>
+<p><code>rect()</code></p>
+<script>
+  const rect_sketch = p => {
+    p.setup = function() {
+      p.createCanvas(100, 100);
+      p.background(255 - 32);
+      p.rect(30, 20, 50, 70)
+    };
+  };
+  new p5(rect_sketch, "rect_sketch_container");
+</script>
+
 ### Drawing Order
 When a program runs, the computer starts at the top and reads each line of code until it reaches the last line and then stops. If you want a shape to be drawn on top of all other shapes, it needs to follow the others in the code.
 
-==TODO: Drawing Styles?==
+> TODO: Drawing Modes
+
+> TODO: Drawing Styles?
 
 ## Programming Basics
 
