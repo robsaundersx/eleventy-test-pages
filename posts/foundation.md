@@ -488,21 +488,23 @@ for (int x = border; x <= width - border; x += step) {
 
 <script>
   const random_sketch3 = p => {
-    p.createCanvas(400, 400);
-    p.background(255);
-    p.noStroke();
+    p.setup = function() {
+      p.createCanvas(400, 400);
+      p.background(255);
+      p.noStroke();
 
-    let border = 20;
-    let cols = 40;
-    let step = (p.width - 2 * border) / (cols - 1);
+      let border = 20;
+      let cols = 40;
+      let step = (p.width - 2 * border) / (cols - 1);
 
-    for (let x = border; x <= p.width - border; x += step) {
-      for (let y = border; y <= p.height - border; y += step) {
-        let diameter = p.random(step * 0.3, step);
-        p.fill(p.random(16, 240));
-        p.ellipse(x, y, diameter, diameter);
+      for (let x = border; x <= p.width - border; x += step) {
+        for (let y = border; y <= p.height - border; y += step) {
+          let diameter = p.random(step * 0.3, step);
+          p.fill(p.random(16, 240));
+          p.ellipse(x, y, diameter, diameter);
+        }
       }
-    }
+    };
   };
   let random_sketch3_instance = new p5(random_sketch3, "random_sketch3_container");
 </script>
