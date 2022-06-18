@@ -45,10 +45,12 @@ Create a new sketch in Processing using the menu `File > New`, in the _text edit
 ellipse(50, 50, 80, 80);
 ```
 
+This line of code means "draw an ellipse, with the center 50 pixels over from the left and 50 pixels down from the top, with a width and height of 80 pixels." Click the Run button in the _toolbar_ or choose `Sketch > Run` from the menu bar.
+
 <div id="ellipse_sketch_container"></div>
 <script>
   const ellipse_sketch = p => {
-    p.setup() {
+    p.setup = function() {
       p.createCanvas(100, 100);
       p.backgroun(255-32);
       p.ellipse(50, 50, 80, 80);
@@ -56,12 +58,6 @@ ellipse(50, 50, 80, 80);
   };
   let ellipse_sketch_instance = new p5(ellipse_sketch, "ellipse_sketch_container");
 </script>
-
-==NOTE: By converting Processing sketches to P5.js, live versions could be included in the document.==
-
-This line of code means "draw an ellipse, with the center 50 pixels over from the left and 50 pixels down from the top, with a width and height of 80 pixels." Click the Run button in the _toolbar_ or choose `Sketch > Run` from the menu bar.
-
-==Figure: output==
 
 If you've typed everything correctly, you’ll see the ellipse image appear in a _display window_.
 
