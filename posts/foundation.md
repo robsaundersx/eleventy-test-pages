@@ -321,10 +321,10 @@ const sketch3 = p => {
     }
   }
 };
-let sketch3_instance = new p5(sketch3, sketch3_container);
+let sketch3_instance = new p5(sketch3, "sketch3_container");
 </script>
 
-For each line in y-direction (y < height) the code iterates through every pixel in x-direction (x < width) and draws an ellipse at the (x, y) location.
+For each line in y-direction (`y < height`) the code iterates through every pixel in x-direction (`x < width`) and draws an ellipse at the (x, y) location.
 
 ### Color ==TODO: Change name to Style?==
 To change colour of shapes drawn to the _display window_ you can use the `background()`, `fill()`, and `stroke()` functions.
