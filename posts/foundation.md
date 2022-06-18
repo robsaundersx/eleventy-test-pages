@@ -423,6 +423,23 @@ for (int x = 40; x <= width - 40; x += 10) {
 }
 ```
 
+<div id="random_sketch1_container"></div>
+
+<script>
+  const random_sketch1 = p => {
+    p.setup = function() {
+      p.createCanvas(400, 200);
+      p.background(255 - 32);
+      p.rectMode(CENTER);
+      for (let x = 40; x <= p.width - 40; x += 10) {
+        let h = p.height/8 + random(p.height/2);
+        p.rect(x, p.height/2, 5, h);
+      }
+    };
+  };
+  let random_sketch1_instance = new p5(random_sketch1, "random_sketch1_container");
+</script>
+
 When given two parameters, the range of values returned are between the first (minimum) value and the second (maximum) value. The following sketch uses the two parameter version of `random()` to generate values to draw lines at random angles:
 
 ```java
