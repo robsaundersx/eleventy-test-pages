@@ -310,6 +310,7 @@ for (int x = 10; x < width; x += 15) {
   }
 }
 ```
+
 <div id="loop_sketch3_container"></div>
 
 <script>
@@ -343,7 +344,7 @@ for (int y = 0; y < height; y += 1) {
 }
 ```
 
-<div id="rgb_sketch1_container"><div>
+<div id="rgb_sketch1_container"></div>
 
 <script>
 const rgb_sketch1 = p => {
