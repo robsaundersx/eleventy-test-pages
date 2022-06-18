@@ -357,7 +357,7 @@ const rgb_sketch1 = p => {
     }
   };
 };
-let rgb_sketch1_instance = new p5(rgb_sketch1, "rgb1_container");
+let rgb_sketch1_instance = new p5(rgb_sketch1, "rgb_sketch1_container");
 </script>
 
 Specifying RGB values often isn’t very intuitive, so to choose colours, you can use _Color Selector_ tool, by selecting `Tools > Color Selector` from the menu.
