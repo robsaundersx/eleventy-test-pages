@@ -246,6 +246,21 @@ for (int x = 40; x <= width-40; x += 20) {
 }
 ```
 
+<div id="sketch1_container"></div>
+
+<script>
+  const sketch1 = p => {
+    p.setup = function() {
+      createCanvas(400, 400);
+      strokeWeight(5);
+      for (let x = 40; x <= width - 40; x += 20) {
+        line(x+10, 40, x-10, height-40);
+      }
+    };
+  };
+  let sketch1_instance = new p5(sketch1, sketch1_container);
+</script>
+
 For comparison, here is the same pattern drawn with a `while` loop:
 ```java
 size(400, 200);
