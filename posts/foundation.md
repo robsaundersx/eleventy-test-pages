@@ -17,9 +17,13 @@ Processing is a programming environment that was first created to make it easier
 TODO: Something about Processing being translated to Javascript and Python
 </div>
 
-> NOTE: Should I try to cover both Processing and P5.js in a single document or create two versions of the same document, one using Processing and the other using P5.js?
+<div class="warning">
+NOTE: Should I try to cover both Processing and P5.js in a single document or create two versions of the same document, one using Processing and the other using P5.js?
+</div>
 
-> NOTE: Can P5.js send OSC messages? Can P5.js talk to Arduino?
+<div class="warning">
+NOTE: Can P5.js send OSC messages? Can P5.js talk to Arduino?
+</div>
 
 The latest version of Processing can be downloaded from https://processing.org/download/
 
@@ -28,13 +32,13 @@ A Processing program is called a sketch. The idea behind Processing is that we o
 
 ### The Main Window
 
-==Figure 1. The Processing Development Environment==
+> _Figure 1. The Processing Development Environment_
 
 The above figure shows the Processing Development Environment. The large area in the main window is the _text editor_ and the row of buttons across the top of the window is the _toolbar_, which is where you can quickly Run, Stop and Debug your sketch. Directly above the _text editor_ are tabs, which show the names of the files that currently make up your sketch. For a simple sketch we will have only one tab, because we have only one file, and this tab will show the name of our sketch, which is always displayed as the first tab. The area below the _text editor_ is called the _console_, you will see messages from Processing appear here, e.g., if there is a problem with your code you will wee errors here, and you can display text here from within your running program, which can be very helpful, e.g., if you quickly want to check the value of a calculation. The small square window is the _display window_, the graphical output of a running sketch.
 
 ### The Library Manager
 
-==Figure 2. The Libraries Manager==
+> _Figure 2. The Libraries Manager_
 
 The core functionality of Processing is sufficient for developing many sketches. When you need to do something that's not available in Processing directly, you can use a library to add the functionality you need. Libraries can be installed by navigating to the menu `Sketch > Import Library... > Add Library...`
 
@@ -180,9 +184,9 @@ rect(20, 20, 40, 60);
   new p5(order_sketch2, "order_sketch2_container");
 </script>
 
-> TODO: Drawing Modes
+<div class="warning">TODO: Drawing Modes</div>
 
-> TODO: Drawing Styles?
+<div class="warning">TODO: Drawing Styles?</div>
 
 ## Programming Basics
 
@@ -230,9 +234,8 @@ Data Type | Example Usage | Usage Description
 
 In addition to the above data types, which all come from the Java programming language, Processing adds a special data type, `color`, for specifying and working with colours. We will return to the topic of working with colours later.
 
-==TODO: Add section on color data type?==
-
-==TODO: Statements==
+<div class="warning">TODO: Add section on color data type?</div>
+<div class="warning">TODO: Statements</div>
 
 ### Conditionals
 A conditional checks that a condition has been met before executing a code block. The code between the curly braces `{` `}` is called a code block, and is something that you will see a lot in Processing.
