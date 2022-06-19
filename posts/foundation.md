@@ -218,7 +218,7 @@ int x = 12; // Declare x as an int variable and assign a value
 The most common Processing data types:
 
 Data Type | Example Usage | Usage Description
-----------:|------------------|------------------
+---------:|:--------------|:-----------------
 `int` | `int number = 2;` | An integer (whole number).
 `float` | `float number = 3.14;` | A floating-point (decimal) number.
 `boolean` | `boolean fact = true;` | A true or false (logical) value.
