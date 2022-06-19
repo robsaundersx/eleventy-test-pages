@@ -12,11 +12,14 @@ layout: layouts/post.njk
 ## Introduction
 Processing is a programming environment that was first created to make it easier to develop visual applications with an emphasis on generative techniques, animation and interaction. The original developers of Processing wanted to be able to "sketch" ideas in code, this idea of quickly implementing ideas in code remains evident in the use of the terms "sketch" and "sketchbook" to refer to individual programs and collections of programs that you create over time. As its capabilities have expanded over the past two decades, Processing has come to be used for more advanced applications. Originally developed around a domain-specific extension to the Java programming language, intended for digital artists and designers, Processing has evolved into a full-blown design and prototyping tool used for large-scale art installations, motion graphics production, complex data visualisation, and creative tools development. Case studies of Processing used in production can be found at https://processing.org/exhibition/
 
-==TODO: Something about Processing being translated to Javascript and Python==
 
-==NOTE: Should I try to cover both Processing and P5.js in a single document or create two versions of the same document, one using Processing and the other using P5.js?==
+<div class="warning">
+TODO: Something about Processing being translated to Javascript and Python
+</div>
 
-==NOTE: Can P5.js send OSC messages? Can P5.js talk to Arduino?==
+> NOTE: Should I try to cover both Processing and P5.js in a single document or create two versions of the same document, one using Processing and the other using P5.js?
+
+> NOTE: Can P5.js send OSC messages? Can P5.js talk to Arduino?
 
 The latest version of Processing can be downloaded from https://processing.org/download/
 
